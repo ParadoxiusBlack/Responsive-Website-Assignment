@@ -60,6 +60,12 @@ footer {
     text-align: center;
 }
 
+.thumbnail {
+    width: 150px; /* Default size */
+    height: auto;
+    cursor: pointer;
+}
+
 /* Grid container styles */
 .grid-container {
     display: grid;
