@@ -81,6 +81,27 @@ footer {
     cursor: pointer;
 }
 
+/* General text background and border styles */
+.text-background {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* Text color */
+    padding: 0.5rem; /* Padding around the text */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Apply to specific elements */
+header h1,
+main h2,
+main p,
+figcaption {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* Text color */
+    padding: 0.5rem; /* Padding around the text */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    border-radius: 5px; /* Rounded corners */
+}
+
 /* Grid container styles */
 .grid-container {
     display: grid;
