@@ -1,3 +1,12 @@
+/* Fixed background */
+body {
+    background-image: url('media/OcunanaandMartin.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* General styles */
 body {
     display: grid;
@@ -61,8 +70,9 @@ footer {
 }
 
 .thumbnail {
-    width: 150px; /* Default size */
-    height: auto;
+    width: 300px; /* Default size */
+    height: 250px;
+    object-fit: cover;
     cursor: pointer;
 }
 
@@ -118,7 +128,7 @@ figcaption {
 
 /* Animation styles */
 header {
-    animation: fadeIn 2s ease-in-out;
+    animation: none;
 }
 
 header.jump {
