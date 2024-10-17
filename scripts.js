@@ -9,7 +9,13 @@ document.querySelector('header').addEventListener('click', function() {
 function showSection(sectionId) {
     const sections = document.querySelectorAll('main section');
     sections.forEach(section => {
-        section.style.display = section.id === sectionId ? 'block' : 'none';
+        if (section.id === sectionId) {
+            section.style.display = 'block';
+            section.setAttribute('aria-hidden', 'false');
+        } else {
+            section.style.display = 'none';
+            section.setAttribute('aria-hidden', 'true');
+        }
     });
 }
 
