@@ -1,3 +1,4 @@
+/* General styles */
 body {
     display: grid;
     grid-template-areas:
@@ -19,7 +20,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
     background-color: #333;
     color: white;
 }
@@ -46,21 +46,39 @@ nav ul li a {
 
 aside {
     grid-area: aside;
-    padding: 1rem;
     background-color: #f4f4f4;
 }
 
 main {
     grid-area: main;
-    padding: 1rem;
 }
 
 footer {
     grid-area: footer;
-    padding: 1rem;
     background-color: #333;
     color: white;
     text-align: center;
+}
+
+/* Grid container styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.grid-container figure {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 figure {
@@ -72,25 +90,41 @@ figcaption {
     font-style: italic;
 }
 
+/* Keyframes for animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-50px); }
+    60% { transform: translateY(-25px); } 
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-50px); } /* Jump up */
+    50% { transform: translateY(0); } /* Return to original position */
+    70% { transform: translateY(-25px); } /* Small bounce */
+    100% { transform: translateY(0); } /* Return to original position */
+}
+
+/* Animation styles */
 header {
     animation: fadeIn 2s ease-in-out;
 }
 
+header.jump {
+    animation: jump 0.5s ease-in-out; 
+}
+
 nav ul li a:hover {
-    animation: bounce 0.5s;
+    animation: bounce 1s ease-in-out; 
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-30px); }
-    60% { transform: translateY(-15px); }
-}
 
+/* Media container styles */
 .media-container {
     display: flex;
     flex-wrap: wrap;
@@ -103,33 +137,7 @@ nav ul li a:hover {
     height: auto;
 }
 
-@media (max-width: 768px) {
-    body {
-        grid-template-areas:
-            "header"
-            "main"
-            "aside"
-            "footer";
-        grid-template-columns: 1fr;
-    }
-
-    .media-container {
-        flex-direction: column;
-    }
-}
-
-.media-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.media-container img,
-.media-container video {
-    max-width: 100%;
-    height: auto;
-}
-
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
     body {
         grid-template-areas:
