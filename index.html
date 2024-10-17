@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <img src="media/logo.jpg" alt="Logo">
-        <h1>Paradoxius Black's Mewtwo Obssession</h1>
+        <img src="media/logo.jpg" alt="Logo" class="clickable">
+        <h1>Paradoxius Black's Mewtwo Obsession</h1>
         <nav>
             <ul>
                 <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
@@ -28,18 +28,18 @@
             <p>Welcome to my home page!</p>
             <div class="media-container">
                 <figure>
-                    <img src="media/image.jpg" alt="Mewtwo Merch">
+                    <img src="media/image.jpg" alt="Mewtwo Merch" class="clickable">
                     <figcaption>Stuff I got at FanX 2024</figcaption>
                 </figure>
                 <figure>
                     <picture>
                         <source media="(max-width: 600px)" srcset="media/small.jpg">
                         <source media="(min-width: 601px)" srcset="media/large.png">
-                        <img src="media/default.png" alt="Default Mewtwo Image">
+                        <img src="media/default.png" alt="Default Mewtwo Image" class="clickable">
                     </picture>
                     <figcaption>My Creations</figcaption>
                 </figure>
-                <video controls>
+                <video controls class="clickable">
                     <source src="media/video.mp4" type="video/mp4">
                     Your browser does not support the video tag. 
                 </video>
@@ -50,7 +50,7 @@
             <p>Contact information goes here.</p>
         </section>
         <section id="gallery" style="display:none;">
-            <h2>Details</h2>
+            <h2>Gallery</h2>
             <p>My gallery of pictures goes here when I bother to upload new pictures.</p>
         </section>
     </main>
@@ -63,6 +63,18 @@
             </ul>
         </nav>
     </footer>
+    
+    <div id="modal" class="modal">
+        <span class="close">×</span>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Modal Image">
+            <video id="modal-video" controls>
+                <source id="modal-video-source" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    
     <script src="scripts.js"></script>
 </body>
 </html>
