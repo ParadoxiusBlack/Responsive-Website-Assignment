@@ -12,3 +12,37 @@ function showSection(sectionId) {
         section.style.display = section.id === sectionId ? 'block' : 'none';
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalVideo = document.getElementById('modal-video');
+    const modalVideoSource = document.getElementById('modal-video-source');
+    const closeBtn = document.querySelector('.close');
+
+    document.querySelectorAll('.clickable').forEach(item => {
+        item.addEventListener('click', function() {
+            if (this.tagName === 'IMG') {
+                modalImg.src = this.src;
+                modalImg.style.display = 'block';
+                modalVideo.style.display = 'none';
+            } else if (this.tagName === 'VIDEO') {
+                modalVideoSource.src = this.querySelector('source').src;
+                modalVideo.load();
+                modalVideo.style.display = 'block';
+                modalImg.style.display = 'none';
+            }
+            modal.style.display = 'block';
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
