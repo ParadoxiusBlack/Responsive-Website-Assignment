@@ -28,18 +28,18 @@
             <p>Welcome to my home page!</p>
             <div class="media-container">
                 <figure>
-                    <img src="media/image.jpg" alt="Mewtwo Merch" class="clickable">
+                    <img src="media/image1.jpg" alt="Mewtwo Merch" class="clickable thumbnail">
                     <figcaption>Stuff I got at FanX 2024</figcaption>
                 </figure>
                 <figure>
                     <picture>
                         <source media="(max-width: 600px)" srcset="media/small.jpg">
                         <source media="(min-width: 601px)" srcset="media/large.png">
-                        <img src="media/default.png" alt="Default Mewtwo Image" class="clickable">
+                        <img src="media/default.png" alt="Default Mewtwo Image" class="clickable thumbnail">
                     </picture>
                     <figcaption>My Creations</figcaption>
                 </figure>
-                <video controls class="clickable">
+                <video controls class="clickable thumbnail">
                     <source src="media/video.mp4" type="video/mp4">
                     Your browser does not support the video tag. 
                 </video>
@@ -64,8 +64,9 @@
         </nav>
     </footer>
     
+    <!-- Modal Container -->
     <div id="modal" class="modal">
-        <span class="close">×</span>
+        <span class="close">&times;</span>
         <div class="modal-content">
             <img id="modal-img" src="" alt="Modal Image">
             <video id="modal-video" controls>
