@@ -52,3 +52,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function toggleTheme() {
+    const body = document.body;
+
+    // Toggle the theme class
+    body.classList.toggle('dark');
+    body.classList.toggle('light');
+
+    // Move the button if the aside is not visible
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const nav = document.querySelector('nav');
+    const aside = document.querySelector('aside');
+
+    if (window.innerWidth < 769) {
+        nav.appendChild(themeToggleButton);
+    } else {
+        aside.appendChild(themeToggleButton);
+    }
+}
+
+// Move the button on window resize
+window.addEventListener('resize', () => {
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const nav = document.querySelector('nav');
+    const aside = document.querySelector('aside');
+
+    if (window.innerWidth < 769) {
+        nav.appendChild(themeToggleButton);
+    } else {
+        aside.appendChild(themeToggleButton);
+    }
+});
