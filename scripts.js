@@ -55,8 +55,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleTheme() {
     const body = document.body;
-    body.classList.toggle('light'); // Toggle the light class
+    const themeToggleButton = document.getElementById('theme-toggle');
+
+    // Toggle the theme class
+    body.classList.toggle('light');
+
+    // Change button text and appearance
+    if (body.classList.contains('light')) {
+        themeToggleButton.textContent = 'Dark Mode'; // Change text to indicate dark mode
+        themeToggleButton.style.backgroundColor = 'black'; // Dark background
+        themeToggleButton.style.color = 'white'; // White text
+    } else {
+        themeToggleButton.textContent = 'Light Mode'; // Change text to indicate light mode
+        themeToggleButton.style.backgroundColor = 'white'; // Light background
+        themeToggleButton.style.color = 'black'; // Black text
+    }
 }
+
+// Initial setup to set button appearance based on default theme
+window.onload = function() {
+    const body = document.body;
+    const themeToggleButton = document.getElementById('theme-toggle');
+
+    if (body.classList.contains('light')) {
+        themeToggleButton.textContent = 'Dark Mode'; // Default to dark mode text
+        themeToggleButton.style.backgroundColor = 'black';
+        themeToggleButton.style.color = 'white';
+    } else {
+        themeToggleButton.textContent = 'Light Mode'; // Default to light mode text
+        themeToggleButton.style.backgroundColor = 'white';
+        themeToggleButton.style.color = 'black';
+    }
+};
 
 // Move the button on window resize
 window.addEventListener('resize', () => {
