@@ -1,5 +1,6 @@
 /* The 3 .btn at the end of main.css are the only additions I have made to the main.css file from Project 3 and are intended solely to stylize added content under Contact. The other changes I made were to the url in body for the background image
-because its relative position changed with moving main.css into a CSS folder and changes to the default background color of the header, footer, and aside that fit better with dark theme. Was "media/OcunanandMartin.png" and is now '../media/OcunanandMartin.png'  */
+because its relative position changed with moving main.css into a CSS folder and changes to the default background color of the header, footer, and aside that fit better with dark theme. 
+Additionally, I've added a class for the new toggle button to give it more spacing when it moves to under the nav bar on window resizing. Was "media/OcunanandMartin.png" and is now '../media/OcunanandMartin.png'  */
 
 /* Fixed background */
 body {
@@ -260,3 +261,9 @@ nav ul li a:hover {
 .btn i {
     margin-right: 5px;
 }
+
+.theme-toggle-button {
+    margin-top: 20px; /* Adjust this value as needed */
+    margin-bottom: 20px; /* Add space below the button */
+}
+
