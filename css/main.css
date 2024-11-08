@@ -1,24 +1,5 @@
-/* The following 3 .btn are the only additions I have made to the main.css file from Project 3 and are intended solely to stylize added content under Contact. The only other change I made otherwise was to the url in body for the background image
+/* The 3 .btn at the end of main.css are the only additions I have made to the main.css file from Project 3 and are intended solely to stylize added content under Contact. The only other change I made otherwise was to the url in body for the background image
 because its relative position changed with moving main.css into a CSS folder. Was "media/OcunanandMartin.png" and is now '../media/OcunanandMartin.png' */
-
-.btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-.btn i {
-    margin-right: 5px;
-}
 
 /* Fixed background */
 body {
@@ -261,4 +242,21 @@ nav ul li a:hover {
     }
 }
 
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn i {
+    margin-right: 5px;
+}
