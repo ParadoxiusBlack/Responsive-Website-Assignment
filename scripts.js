@@ -53,6 +53,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function updateThemeToggleButtonPosition() {
+    const body = document.body;
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const nav = document.querySelector('nav');
+    const aside = document.querySelector('aside');
+
+    if (window.innerWidth < 769) {
+        if (themeToggleButton.parentNode !== nav) {
+            nav.appendChild(themeToggleButton);
+        }
+    } else {
+        if (themeToggleButton.parentNode !== aside) {
+            aside.appendChild(themeToggleButton);
+        }
+    }
+}
+
 function toggleTheme() {
     const body = document.body;
     const themeToggleButton = document.getElementById('theme-toggle');
@@ -74,37 +91,21 @@ function toggleTheme() {
 
 // Initial setup to set button appearance based on default theme
 window.onload = function() {
+    updateThemeToggleButtonPosition();
+    
     const body = document.body;
     const themeToggleButton = document.getElementById('theme-toggle');
-    const nav = document.querySelector('nav');
-    const aside = document.querySelector('aside');
-
-    if (window.innerWidth < 769) {
-        nav.appendChild(themeToggleButton);
-    } else {
-        aside.appendChild(themeToggleButton);
-    }
     
     if (body.classList.contains('light')) {
-        themeToggleButton.textContent = 'Dark Mode'; // Default to dark mode text
+        themeToggleButton.textContent = 'Dark Mode';
         themeToggleButton.style.backgroundColor = 'black';
         themeToggleButton.style.color = 'white';
     } else {
-        themeToggleButton.textContent = 'Light Mode'; // Default to light mode text
+        themeToggleButton.textContent = 'Light Mode';
         themeToggleButton.style.backgroundColor = 'white';
         themeToggleButton.style.color = 'black';
     }
 };
 
 // Move the button on window resize
-window.addEventListener('resize', () => {
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const nav = document.querySelector('nav');
-    const aside = document.querySelector('aside');
-
-    if (window.innerWidth < 769) {
-        nav.appendChild(themeToggleButton);
-    } else {
-        aside.appendChild(themeToggleButton);
-    }
-});
+window.onresize = updateThemeToggleButtonPosition;
