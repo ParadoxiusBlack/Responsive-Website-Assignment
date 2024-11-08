@@ -76,7 +76,15 @@ function toggleTheme() {
 window.onload = function() {
     const body = document.body;
     const themeToggleButton = document.getElementById('theme-toggle');
+    const nav = document.querySelector('nav');
+    const aside = document.querySelector('aside');
 
+    if (window.innerWidth < 769) {
+        nav.appendChild(themeToggleButton);
+    } else {
+        aside.appendChild(themeToggleButton);
+    }
+    
     if (body.classList.contains('light')) {
         themeToggleButton.textContent = 'Dark Mode'; // Default to dark mode text
         themeToggleButton.style.backgroundColor = 'black';
