@@ -1,0 +1,43 @@
+/* The following edits the background image, and applies lighter colors to the header, aside, footer, .text-background, .btn, and nav ul li a */
+
+/* Light Theme */
+body.light {
+    background-image: url('../media/DxComm_ContrastPB.png'); /* Light theme background */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+/* Light theme header */
+body.light header {
+    background-color: #333; /* Lighter header for light theme */
+}
+
+/* Light theme aside */
+body.light aside {
+    background-color: #C5B4E3; /* Light theme aside */
+}
+
+/* Light theme footer */
+body.light footer {
+    background-color: #333; /* Lighter footer for light theme */
+}
+
+/* Light theme text background */
+body.light .text-background {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    color: black; /* Dark theme text color */
+}
+
+/* Light theme button */
+body.light .btn {
+    background-color: #007bff; /* Light theme button */
+    color: white;
+}
+
+/* Dark theme link color */
+body.light nav ul li a {
+    color: #7c7c7c; /* Darker link color for light theme */
+}
