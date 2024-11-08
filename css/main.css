@@ -1,5 +1,5 @@
-/* The 3 .btn at the end of main.css are the only additions I have made to the main.css file from Project 3 and are intended solely to stylize added content under Contact. The only other change I made otherwise was to the url in body for the background image
-because its relative position changed with moving main.css into a CSS folder. Was "media/OcunanandMartin.png" and is now '../media/OcunanandMartin.png' */
+/* The 3 .btn at the end of main.css are the only additions I have made to the main.css file from Project 3 and are intended solely to stylize added content under Contact. The other changes I made were to the url in body for the background image
+because its relative position changed with moving main.css into a CSS folder and changes to the default background color of the header, footer, and aside that fit better with dark theme. Was "media/OcunanandMartin.png" and is now '../media/OcunanandMartin.png'  */
 
 /* Fixed background */
 body {
@@ -32,7 +32,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #222;
     color: white;
 }
 
@@ -52,13 +52,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: ;
     text-decoration: none;
 }
 
 aside {
     grid-area: aside;
-    background-color: #C5B4E3;
+    background-color: #8B5FA3;
 }
 
 main {
@@ -67,7 +67,7 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
     display: flex;
