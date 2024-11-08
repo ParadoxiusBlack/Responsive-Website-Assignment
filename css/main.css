@@ -1,4 +1,5 @@
-/* The following 3 .btn are the only changes/additions I have made to the main.css file from Project 3 and are intended solely to stylize added content under Contact */
+/* The following 3 .btn are the only additions I have made to the main.css file from Project 3 and are intended solely to stylize added content under Contact. The only other change I made otherwise was to the url in body for the background image
+because its relative position changed with moving main.css into a CSS folder. Was "media/OcunanandMartin.png" and is now "../media/OcunanandMartin.png" */
 
 .btn {
     display: inline-block;
@@ -21,7 +22,7 @@
 
 /* Fixed background */
 body {
-    background-image: url('media/OcunanandMartin.png');
+    background-image: url('../media/OcunanandMartin.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
