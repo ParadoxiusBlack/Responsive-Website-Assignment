@@ -2,6 +2,8 @@
 because its relative position changed with moving main.css into a CSS folder and changes to the default background color of the header, footer, and aside that fit better with dark theme. 
 Additionally, I've added a class for the new toggle button to give it more spacing when it moves to under the nav bar on window resizing. Was "media/OcunanandMartin.png" and is now '../media/OcunanandMartin.png'  */
 
+/*For project 5, the changes mainly include default stuff for the form and a bit to highlight invalid input.*/
+
 /* Fixed background */
 body {
     background-image: url('../media/OcunanandMartin.png');
