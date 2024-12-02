@@ -1,3 +1,5 @@
+/*This file is currently unused by the website, having been split into pages.js and model.js*/
+
 /* 
 Project:  Project 5-Personal Web Site-Visitor Form Validation-Refactor JS
 Name: Connor Preece
