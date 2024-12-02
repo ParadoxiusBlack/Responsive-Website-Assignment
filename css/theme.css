@@ -41,3 +41,81 @@ body.light .btn {
 body.light nav ul li a {
     color: #7c7c7c; /* Darker link color for light theme */
 }
+
+/* Light theme form styling */
+body.light #myform {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light drop shadow */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem; /* Padding inside the form */
+}
+
+body.light .form-group input,
+body.light .form-group textarea {
+    background-color: #f9f9f9; /* Light background for inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 0.5rem; /* Padding inside inputs */
+}
+
+body.light .form-group label {
+    color: #333; /* Darker label color */
+}
+
+/* Dark Theme */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Dark theme header */
+header {
+    background-color: #1f1f1f; /* Darker header */
+}
+
+/* Dark theme aside */
+aside {
+    background-color: #2c2c2c; /* Darker aside */
+}
+
+/* Dark theme footer */
+footer {
+    background-color: #1f1f1f; /* Darker footer */
+}
+
+/* Dark theme text background */
+.text-background {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Dark theme button */
+.btn {
+    background-color: #007bff; /* Dark theme button */
+    color: white;
+}
+
+/* Dark theme link color */
+nav ul li a {
+    color: #b0b0b0; /* Lighter link color */
+}
+
+/* Dark theme form styling */
+#myform {
+    background-color: rgba(30, 30, 30, 0.9); /* Dark background for form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dark drop shadow */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem; /* Padding inside the form */
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #2c2c2c; /* Dark background for inputs */
+    border: 1px solid #444; /* Dark border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 0.5rem; /* Padding inside inputs */
+}
+
+.form-group label {
+    color: #e0e0e0; /* Light label color */
+}
