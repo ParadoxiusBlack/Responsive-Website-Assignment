@@ -1,5 +1,7 @@
 /* The following edits the background image, and applies lighter colors to the header, aside, footer, .text-background, .btn, and nav ul li a */
 
+/* Changes for project 5 include light mode varients of the form*/
+
 /* Light Theme */
 body.light {
     background-image: url('../media/DxComm_ContrastPB.png'); /* Light theme background */
