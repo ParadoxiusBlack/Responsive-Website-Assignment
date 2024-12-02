@@ -70,4 +70,3 @@ function validateForm() {
 
     return valid;
 }
-
