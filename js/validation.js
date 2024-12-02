@@ -43,8 +43,13 @@ function validateState(fieldId, InvalidMessage) {
 }
 
 function setElementValidity(id, valid, message) {
-    const field = document.getElementById(id);
-    const errorDiv = field.nextElementSibling;
+    const field = document.getElementById(id) || document.querySelector(`input[name="${id}"]`);
+    let errorDiv;
+    if (field.type === 'checkbox') {
+        errorDiv = field.closest('.form-group').querySelector('.errorMsg');
+    } else {
+        errorDiv = field.nextElementSibling;
+    }
     if (valid) {
         field.classList.remove('was-validated');
         field.setCustomValidity('');
