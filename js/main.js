@@ -11,7 +11,7 @@ I acknowledge that If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
 */
 
-/* Edits include: Creating a main.js file, spliting functions in a previous scripts.js into several seperate .js files, adding initValidation function, and creating the validation.js file */
+/* Edits include: Creating a main.js file, spliting functions in a previous scripts.js into several seperate .js files, adding initValidation function, and creating the validation.js, pages.js, and model.js file */
 
 document.addEventListener("DOMContentLoaded", function(event) {
     initValidation("#myform");
