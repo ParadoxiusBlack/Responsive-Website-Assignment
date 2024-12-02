@@ -11,8 +11,8 @@ I acknowledge that If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
 */
 
-/* Edits include: Creating a main.js file, spliting functions in a previous scripts.js into several seperate .js files, adding initValidation function, and creating the validation.js, pages.js, and model.js file. I did not see any
-feedback from project 3, either because there was none or I just didn't know where it was, so changes were made base on requirements for project 5. */
+/* Edits include Creating a main.js file, splitting functions in a previous scripts.js into several separate .js files, adding the initialization function, and creating the validation.js, pages.js, and model.js files. I did not see any
+feedback from Project 3, either because there was none or I just didn't know where it was, so changes were made based on the requirements for Project 5. Also added onChange even listeners to indicate when fields in the form are required.*/
 
 document.addEventListener("DOMContentLoaded", function(event) {
     initValidation("#myform");
