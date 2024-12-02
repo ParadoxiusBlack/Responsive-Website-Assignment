@@ -136,3 +136,10 @@ body.light .form-group label {
     color: black; /* Dark text color */
     border: 1px solid rgba(0, 0, 0, 0.5); /* Semi-transparent black border */
 }
+
+/* Light theme thank you message */
+body.light #thankYouMessage {
+    color: #007bff; /* Blue text color */
+    background-color: #fff; /* White background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter drop shadow */
+}
