@@ -16,7 +16,6 @@ feedback from Project 3, either because there was none or I just didn't know whe
 
 document.addEventListener("DOMContentLoaded", function(event) {
     initValidation("#myform");
-    initModal();
     initThemeToggle();
 });
 
