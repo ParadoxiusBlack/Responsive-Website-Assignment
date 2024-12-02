@@ -56,6 +56,22 @@ function setElementValidity(id, valid, message) {
     }
 }
 
+function checkCheckboxGroup(groupName, RequiredMessage) {
+    const checkboxes = document.querySelectorAll(`input[name="${groupName}"]`);
+    let isChecked = false;
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            isChecked = true;
+        }
+    });
+    if (!isChecked) {
+        setElementValidity(groupName, false, RequiredMessage);
+        return false;
+    }
+    setElementValidity(groupName, true, '');
+    return true;
+}
+
 function validateForm() {
     let valid = true;
     valid &= checkRequired('firstName', 'First name is required');
@@ -66,8 +82,8 @@ function validateForm() {
     valid &= checkFormat('zip', 'Invalid zip code', /^[0-9]{5}(?:-[0-9]{4})?$/);
     valid &= checkFormat('cellPhone', 'Invalid phone number', /^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/);
     valid &= checkFormat('email', 'Invalid email address', /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-    valid &= checkRequired('source', 'Please select at least one source');
-
+    valid &= checkCheckboxGroup('source', 'Please select at least one source');
+ 
     return !!valid; // Ensure it returns a boolean
 }
 
