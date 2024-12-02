@@ -68,5 +68,6 @@ function validateForm() {
     valid &= checkFormat('email', 'Invalid email address', /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
     valid &= checkRequired('source', 'Please select at least one source');
 
-    return valid;
+    return !!valid; // Ensure it returns a boolean
 }
+
