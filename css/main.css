@@ -307,7 +307,14 @@ input:invalid ~ div {
 
 /* Styling for labels and inputs */
 .form-group label {
-    margin-bottom: 0.5rem;
+    color: #e0e0e0; /* Light label color */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* Text color */
+    padding: 0.5rem; /* Padding around the text */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Ensure the label takes only the necessary width */
+    margin-bottom: 0.5rem; /* Space below the label */
 }
 
 .form-group input,
@@ -317,6 +324,17 @@ input:invalid ~ div {
     border-radius: 4px;
     width: 100%; /* Ensure inputs take full width */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Flexbox for checkbox groups */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem; /* Space between checkbox groups */
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem; /* Space between checkbox and label */
 }
 
 /* Styling for the submit button */
