@@ -11,19 +11,23 @@ I acknowledge that If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
 */
 
+/* Edits include: Creating a main.js file, spliting functions in a previous scripts.js into several seperate .js files, adding initValidation function, and creating the validation.js file */
+
 document.addEventListener("DOMContentLoaded", function(event) {
-  initValidation("#myform");
+    initValidation("#myform");
+    initModal();
+    initThemeToggle();
 });
 
 function initValidation(formId) {
-  const form = document.querySelector(formId);
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    if (validateForm()) {
-      form.style.display = 'none';
-      document.getElementById('thankYouMessage').style.display = 'block';
-    }
-  });
+    const form = document.querySelector(formId);
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            form.style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+        }
+    });
 
-  // Add onChange event listeners for individual fields
+    // Add onChange event listeners for individual fields
 }
