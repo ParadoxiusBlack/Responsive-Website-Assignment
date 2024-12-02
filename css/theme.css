@@ -116,6 +116,21 @@ nav ul li a {
     padding: 0.5rem; /* Padding inside inputs */
 }
 
+/* General label styling */
 .form-group label {
     color: #e0e0e0; /* Light label color */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* Text color */
+    padding: 0.5rem; /* Padding around the text */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Ensure the label takes only the necessary width */
+    margin-bottom: 0.5rem; /* Space below the label */
+}
+
+/* Light theme label styling */
+body.light .form-group label {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    color: black; /* Dark text color */
+    border: 1px solid rgba(0, 0, 0, 0.5); /* Semi-transparent black border */
 }
