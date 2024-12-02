@@ -383,3 +383,26 @@ input:invalid ~ div {
         margin-top: 1rem; /* Add some space above the button */
     }
 }
+
+#thankYouMessage {
+    display: none; /* Hidden by default */
+    font-size: 2rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: #fff; /* White text color */
+    background-color: #007bff; /* Blue background color */
+    padding: 1rem; /* Padding around the text */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    position: fixed; /* Fixed position */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the message */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    animation: flash 1s infinite; /* Flash animation */
+}
+
+/* Flash animation */
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
