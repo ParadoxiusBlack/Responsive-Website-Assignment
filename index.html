@@ -14,6 +14,8 @@ dark is the change in the background image. It was much easier to set that than 
 also interesting moving the toggle button when the webpage resized small enough for the aside I have to not show. I didn't want the functionality of theme toggling to be lost by screen size, so it moves to under the nav bar when necessary. 
 
 -->
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,6 +34,7 @@ also interesting moving the toggle button when the webpage resized small enough 
                 <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#" onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact</a></li>
                 <li><a href="#" onclick="showSection('gallery')"><i class="fas fa-info-circle"></i> Gallery</a></li>
+                <li><a href="#" onclick="showSection('registration')"><i class="fa fa-user-plus" aria-hidden="true"></i> Registration</a></li>
             </ul>
         </nav>
     </header>
@@ -141,6 +144,72 @@ also interesting moving the toggle button when the webpage resized small enough 
                 </video>
             </div>   
         </section>
+        <section id="registration" style="display:none;">
+            <form id="myform" novalidate>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                     <label for="zip">Zip</label>
+                    <input type="text" id="zip" name="zip" required>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="cellPhone">Cell Phone</label>
+                    <input type="text" id="cellPhone" name="cellPhone" required>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                    <label>How did you find my page?</label>
+                    <div>
+                        <input type="checkbox" id="internet" name="source" value="Internet">
+                        <label for="internet">Internet</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="friend" name="source" value="Friend">
+                        <label for="friend">Friend</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="google" name="source" value="Google">
+                        <label for="google">Google</label>
+                    </div>
+                    <div class="errorMsg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+                <button id="submitBtn" type="submit">Submit</button>
+            </form>
+            <div id="thankYouMessage" style="display:none;">Thank you for visiting!</div>
+        </section>
     </main>
     <footer>
         <nav>
@@ -148,6 +217,7 @@ also interesting moving the toggle button when the webpage resized small enough 
                 <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#" onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact</a></li>
                 <li><a href="#" onclick="showSection('gallery')"><i class="fas fa-info-circle"></i> Gallery</a></li>
+                <li><a href="#" onclick="showSection('registration')"><i class="fa fa-user-plus" aria-hidden="true"></i> Registration</a></li>
             </ul>
         </nav>
     </footer>
