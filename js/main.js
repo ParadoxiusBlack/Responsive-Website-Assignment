@@ -31,4 +31,11 @@ function initValidation(formId) {
     });
 
     // Add onChange event listeners for individual fields
+    document.querySelectorAll('input, textarea').forEach(field => {
+        field.addEventListener('change', function() {
+            if (field.required) {
+                checkRequired(field.id, `${field.name} is required`);
+            }
+        });
+    });
 }
