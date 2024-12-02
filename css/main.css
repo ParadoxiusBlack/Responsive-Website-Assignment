@@ -345,10 +345,12 @@ input:invalid ~ div {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
 }
 
 #submitBtn:hover {
-    background-color: #0056b3;
+    background-color: #003f7f; /* More distinct color change */
+    transform: scale(1.05); /* Slightly enlarge the button */
 }
 
 /* Media query for larger screens */
