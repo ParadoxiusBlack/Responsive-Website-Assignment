@@ -268,3 +268,89 @@ nav ul li a:hover {
     margin-left: 90px;
 }
 
+/* The following is css pertaining to the form validation and appearance */
+
+/* Only show error information when 'was-validated' class is added to the input */
+input.was-validated:invalid {
+  color: red;
+  border: 1px solid red;
+}
+
+input.was-validated:invalid ~ div {
+  display: block;
+}
+
+/* Hide all error divs */
+input:valid ~ div {
+  display: none;
+}
+
+input:invalid ~ div {
+  display: none;
+}
+
+/* Flexbox container for the form */
+#myform {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between form groups */
+    max-width: 600px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the form on the page */
+    padding: 1rem; /* Add some padding */
+}
+
+/* Flexbox for form groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for labels and inputs */
+.form-group label {
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Ensure inputs take full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Styling for the submit button */
+#submitBtn {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    #myform {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form-group {
+        flex: 1 1 45%; /* Adjust the width of form groups */
+        margin-right: 2%; /* Add some space between form groups */
+    }
+
+    .form-group:nth-child(2n) {
+        margin-right: 0; /* Remove right margin for every second form group */
+    }
+
+    #submitBtn {
+        flex: 1 1 100%; /* Make the submit button full width */
+        margin-top: 1rem; /* Add some space above the button */
+    }
+}
